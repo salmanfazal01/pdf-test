@@ -1,9 +1,11 @@
-import MainPdf from "./components/MainPdf";
+import KendoPdf from "./components/Kendo";
+import JsPdf from "./components/JsPdf";
 
 function App() {
   return (
     <div>
-      <MainPdf />
+      {/* <KendoPdf /> */}
+      <JsPdf />
     </div>
   );
 }

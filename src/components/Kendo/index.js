@@ -1,7 +1,8 @@
 import { Button, Grid, makeStyles, Paper } from "@material-ui/core";
 import { PDFExport, savePDF } from "@progress/kendo-react-pdf";
 import React, { useRef } from "react";
-import SomeApiData from "./SomeApiData";
+import SomeApiData from "../SomeApiData";
+import SomeIFrame from "../SomeIFrame";
 
 const useStyle = makeStyles((theme) => ({
   root: {
@@ -16,7 +17,7 @@ const useStyle = makeStyles((theme) => ({
   },
 }));
 
-const MainPdf = () => {
+const KendoPdf = () => {
   const classes = useStyle();
   const container = useRef(null);
   const pdfExportComponent = useRef(null);
@@ -62,7 +63,8 @@ const MainPdf = () => {
           author="KendoReact Team"
         >
           <Paper elevation={3} ref={container} className={classes.pdfContainer}>
-            <SomeApiData />
+            {/* <SomeApiData /> */}
+            <SomeIFrame />
           </Paper>
         </PDFExport>
       </Grid>
@@ -70,4 +72,4 @@ const MainPdf = () => {
   );
 };
 
-export default MainPdf;
+export default KendoPdf;
